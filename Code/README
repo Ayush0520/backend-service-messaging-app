@@ -1,0 +1,26 @@
+GroupChat Application
+This repository contains the code for a simple GroupChat application implemented using Python and ZeroMQ. The application consists of three main components:
+
+User.py: This script runs on the local computer and allows users to interact with the GroupChat application. Users can join groups, send messages, fetch messages, and leave groups.
+
+messageServer.py: This script runs on a Google Cloud (GLC) VM instance and serves as the central server for managing group registrations and providing information about available groups to users.
+
+groupServer.py: This script also runs on a GLC VM instance and manages the groups. It handles user registrations, message storage, and retrieval within groups.
+
+Install Dependencies: Ensure that you have Python and ZeroMQ installed on your local machine and GLC VM instances.
+
+Running the Servers:
+
+Start the messageServer.py script on the GLC VM instance.
+Start the groupServer.py script on another GLC VM instance.
+Running the User Client:
+
+Run the user.py script on your local computer.
+Follow the prompts to interact with the GroupChat application as a user.
+
+Usage
+User Interaction: Users can perform various actions through the command-line interface provided by the user.py script. These actions include joining groups, leaving groups, sending messages, fetching messages, and viewing available groups.
+
+Group Registration: Groups are registered and managed by the groupServer.py script. Users can join existing groups or create new ones through the user interface.
+
+Message Exchange: Messages sent by users are stored and managed by the groupServer.py script. Users can fetch messages from a specific group based on timestamps.
